@@ -8,10 +8,10 @@ public class Main {
         try{
             namesNumber = sc.nextInt();
         }catch(InputMismatchException ime){
-            System.out.println("Look what you did: " + ime + " Please type a positive int!");
+            throw new InputMismatchException("Look what you did. Please type a positive int!");
         }
         if(namesNumber < 1){
-            throw new RuntimeException("You must have done something wrong since this came up. Try again.");
+            throw new RuntimeException("You must have done something wrong since this came up. Try entering a positive int this time.");
         }
         List<String> names = new ArrayList<>();
         for (int i = 0; i < namesNumber; i++) {
